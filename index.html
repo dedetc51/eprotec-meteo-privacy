@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>Politique de confidentialité — Météo DPS pour eProtec</title>
+  <meta name="description" content="Politique de confidentialité de l’extension Météo DPS pour eProtec.">
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #667085;
+      --blue: #1677b8;
+      --blue2: #1f9bd7;
+      --line: #dce4ec;
+      --soft: #eef7fd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+    header {
+      background: linear-gradient(135deg, var(--blue), var(--blue2));
+      color: #fff;
+      padding: 48px 20px 42px;
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 4vw, 2.55rem);
+      line-height: 1.2;
+    }
+    header p { margin: 0; opacity: .94; }
+    main { padding: 28px 0 52px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 26px;
+      box-shadow: 0 8px 28px rgba(31, 41, 55, .06);
+      margin-bottom: 18px;
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      color: #123b56;
+    }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: 8px 0 0 20px; padding: 0; }
+    li { margin: 7px 0; }
+    a { color: #0d6da8; }
+    .notice {
+      background: var(--soft);
+      border-left: 4px solid var(--blue);
+      padding: 14px 16px;
+      border-radius: 8px;
+    }
+    .meta {
+      font-size: .92rem;
+      color: var(--muted);
+    }
+    footer {
+      color: var(--muted);
+      text-align: center;
+      font-size: .9rem;
+      padding: 10px 0 34px;
+    }
+    code {
+      background: #f2f4f7;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-size: .92em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Politique de confidentialité</h1>
+      <p>Météo DPS pour eProtec</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>1. Objet de l’extension</h2>
+      <p>
+        « Météo DPS pour eProtec » ajoute, sur les fiches d’événements eProtec,
+        une synthèse météo correspondant au lieu, à la date et aux horaires du dispositif.
+        L’extension a pour seul objectif de faciliter la préparation météo d’un DPS.
+      </p>
+      <div class="notice">
+        L’extension ne collecte pas les identifiants de connexion eProtec, ne lit pas les mots de passe
+        et n’accède pas aux données de paiement, de santé ou de messagerie personnelle.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Données lues sur la page eProtec</h2>
+      <p>
+        Lorsque l’utilisateur ouvre une fiche d’événement et demande la météo, l’extension peut lire
+        les informations suivantes affichées sur cette fiche :
+      </p>
+      <ul>
+        <li>le lieu du DPS ;</li>
+        <li>l’adresse du DPS, lorsqu’elle est renseignée ;</li>
+        <li>l’antenne ou l’organisateur, utilisé uniquement pour améliorer la localisation en cas de lieu ambigu ;</li>
+        <li>la date et les horaires du DPS.</li>
+      </ul>
+      <p>
+        Ces informations servent uniquement à déterminer une localisation cohérente et à demander
+        la prévision météo correspondant à l’événement.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>3. Services externes utilisés</h2>
+      <p>L’extension peut transmettre les informations strictement nécessaires aux services suivants :</p>
+      <ul>
+        <li>
+          <strong>GeoPF / Géoplateforme</strong> : utilisé pour transformer un lieu ou une adresse en coordonnées géographiques.
+          Une requête de géocodage peut contenir le lieu, l’adresse, la commune, le code postal ou la commune de l’antenne organisatrice.
+          <br><a href="https://www.geoportail.gouv.fr/" rel="noopener noreferrer">Site de la Géoplateforme / Géoportail</a>
+        </li>
+        <li>
+          <strong>Open-Meteo</strong> : utilisé comme service de géocodage de secours et pour récupérer les prévisions météo.
+          Les requêtes météo utilisent principalement les coordonnées géographiques, la date du DPS et les paramètres météorologiques nécessaires.
+          <br><a href="https://open-meteo.com/" rel="noopener noreferrer">Site Open-Meteo</a>
+          — <a href="https://open-meteo.com/en/terms" rel="noopener noreferrer">Conditions / informations de confidentialité</a>
+        </li>
+      </ul>
+      <p class="meta">
+        Comme pour toute requête Internet, l’adresse IP de l’appareil peut techniquement être reçue par le service tiers
+        au moment de la connexion. Le traitement effectué par ces services relève également de leurs propres conditions.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>4. Stockage et conservation</h2>
+      <p>
+        L’extension ne crée pas de base de données d’utilisateurs et ne conserve pas durablement
+        les informations d’un DPS après leur utilisation pour afficher la météo.
+      </p>
+      <p>
+        Elle n’intègre aucun mécanisme publicitaire, aucun outil d’analytique et aucun système de profilage utilisateur.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>5. Vente et partage des données</h2>
+      <p>
+        Les données utilisées par l’extension ne sont ni vendues, ni louées, ni utilisées à des fins publicitaires,
+        de ciblage, de crédit ou de profilage.
+      </p>
+      <p>
+        Elles sont transmises uniquement aux services techniques nécessaires au géocodage et à la fourniture de la météo,
+        comme décrit ci-dessus.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>6. Permissions du navigateur</h2>
+      <p>
+        L’extension utilise uniquement les autorisations nécessaires pour fonctionner sur les fiches d’événements eProtec
+        et pour interroger les services de géocodage et de météo.
+      </p>
+      <p>
+        Elle n’exécute pas de code JavaScript distant : le code de l’extension est inclus dans le package installé
+        dans le navigateur. Les services externes renvoient uniquement des données utilisées par l’extension.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>7. Sécurité</h2>
+      <p>
+        Les échanges avec eProtec, GeoPF et Open-Meteo sont effectués via des connexions HTTPS.
+        L’extension limite son fonctionnement aux pages eProtec prévues pour les fiches d’événements.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>8. Contact</h2>
+      <p>
+        Pour toute question concernant cette politique ou le fonctionnement de l’extension,
+        utilisez l’adresse de contact de soutien indiquée sur la fiche de l’extension dans le magasin du navigateur.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>9. Modifications de cette politique</h2>
+      <p>
+        Cette politique peut être mise à jour lorsque le fonctionnement de l’extension ou les services techniques utilisés évoluent.
+        La version publiée sur cette page est la version applicable.
+      </p>
+      <p class="meta"><strong>Dernière mise à jour :</strong> 29 août 2026.</p>
+    </section>
+  </main>
+
+  <footer>
+    Météo DPS pour eProtec — extension indépendante.
+  </footer>
+</body>
+</html>
